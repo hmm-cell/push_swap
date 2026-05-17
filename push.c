@@ -1,11 +1,11 @@
-void push(t_node **stack_a, t_node **stack_b)
+void push(t_node **stack_1, t_node **stack_2)
 {
     t_node *node_to_move;
 
-    if (!stack_a || !*stack_a)
+    if (!stack_1 || !*stack_1)
         return ;
-    node_to_move = *stack_a;
-    *stack_a = (*stack_a)->next;
-    node_to_move->next = *stack_b;
-    *stack_b = node_to_move;
+    node_to_move = *stack_1;
+    *stack_1 = (*stack_1)->next;
+    node_to_move->next = *stack_2;
+    *stack_2 = node_to_move;
 }
