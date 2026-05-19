@@ -12,15 +12,15 @@ int  find_minimum_pos(t_node *stack_a)
   current_pos = 0;
   min = stack_a->content;
 
-  while (current != NULL)
+  while (ptr != NULL)
   {
-    if (current->content < min)
+    if (ptr->content < min)
     {
-      min = current->content;
+      min = ptr->content;
       min_pos = current_pos;
     }
     current_pos++;
-    current = current->next;
+    ptr = ptr->next;
   }
   return (min_pos);
 }
